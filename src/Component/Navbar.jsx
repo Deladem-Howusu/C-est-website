@@ -1,0 +1,47 @@
+// import { X } from "lucide-react";
+// import LiElement from "./LiElement";
+// import Button from "./Button";
+// import { useState } from "react";
+
+// function Sidebar() {
+//   const [open, setOpen] = useState(false);
+//   return (
+//     <>
+//       <div
+//         className="fixed inset-0 bg-black/50 backdrop-blur-sm z-40"
+//         onClick={() => setOpen(false)}
+//       ></div>
+
+//       <div
+//         className={`fixed top-0 left-0 h-full w-full bg-blue-900 text-white z-50 transform transition-transform duration-300 ease-in-out ${
+//           open ? "translate-x-0" : "translate-x-full"
+//         }`}
+//       >
+//         {/* Close Button */}
+//         <div className="flex justify-between items-center p-5 border-b border-white/20">
+//           <span className="text-lg font-semibold">Menu</span>
+//           <X
+//             size={24}
+//             className="cursor-pointer text-yellow-400"
+//             onClick={() => setOpen(false)}
+//           />
+//         </div>
+
+//         {/* Sidebar Links */}
+//         <ul className="flex flex-col gap-6 p-6 text-lg font-medium">
+//           <LiElement>Home</LiElement>
+//           <LiElement>About Us</LiElement>
+//           <LiElement>Services</LiElement>
+//           <LiElement>Contact</LiElement>
+//         </ul>
+
+//         {/* Button */}
+//         <div className="mt-8 px-6">
+//           <Button>Get Started</Button>
+//         </div>
+//       </div>
+//     </>
+//   );
+// }
+
+// export default Sidebar;

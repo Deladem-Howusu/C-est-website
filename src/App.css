@@ -1,0 +1,111 @@
+@import "tailwindcss";
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.animate-fadeIn {
+  animation: fadeIn 0.4s ease-out forwards;
+}
+
+body,
+html {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  overflow-x: hidden;
+  font-family: "Montserrat", sans-serif;
+  position: relative;
+  scrollbar-width: thin;
+}
+
+.hero {
+  height: 100vh;
+
+  background-image: linear-gradient(90deg, rgb(7, 7, 7), #032186);
+  filter: brightness(0.8);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+
+  /* filter: blur(6px); */
+}
+
+.navbar {
+  backdrop-filter: blur(1px);
+  outline: 1px solid rgb(254, 254, 254);
+  background-color: rgba(255, 255, 255, 0.183);
+  position: sticky;
+  top: 15px;
+  z-index: 50;
+}
+
+.hero-content {
+  width: 100%;
+  min-height: 0;
+  height: 80%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+[data-aos="fade-up"] {
+  transform: translateY(20px);
+}
+
+.hero-content h1 {
+  text-align: center;
+  font-family: "Montserrat", sans-serif;
+}
+
+.transparent {
+  background-color: rgba(255, 255, 255, 0.178);
+  backdrop-filter: blur(2px);
+  outline: solid 1px white;
+  color: white;
+}
+
+@media screen {
+  @media (max-width: 600px) {
+    /* .hero {
+      height: auto;
+      min-height: 100vh;
+      padding: 1.5rem 1rem;
+      background-position: center top;
+      background-size: cover;
+      backdrop-filter: blur(6px);
+      filter: none;
+    }
+
+    .navbar {
+      top: 0;
+      padding: 0.5rem 0.75rem;
+      border-radius: 0.5rem;
+    }
+
+    .hero-content {
+      height: auto;
+      min-height: 60vh;
+      padding: 1rem;
+      align-items: flex-start;
+      justify-content: center;
+    } */
+
+    .hero-content h1 {
+      line-height: 2.5rem;
+    }
+
+    .transparent {
+      padding: 0.6rem 0.75rem;
+      font-size: 0.95rem;
+      outline-width: 1px;
+    }
+  }
+}
