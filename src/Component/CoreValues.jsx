@@ -19,7 +19,7 @@ function CoreValues() {
 
   useEffect(() => {
     AOS.init({
-      duration: 1000,
+      duration: 2000,
       easing: "ease-in-out",
       once: false,
     });
@@ -37,9 +37,9 @@ function CoreValues() {
   }, []);
 
   return (
-    <section className="p-5 pb-20 shadow-2xs relative">
+    <section className="p-5 pb-20  pt-20 shadow-2xs relative">
       <div
-        data-aos="fade-up"
+        data-aos="fade-down"
         className="flex flex-col w-full items-center py-5"
       >
         <h1 className="lg:text-3xl font-semibold text-[#081948]">

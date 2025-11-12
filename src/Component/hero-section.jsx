@@ -136,8 +136,15 @@ import LiElement from "./LiElement";
 function HeroSection() {
   const [open, setOpen] = useState(false);
 
+  const handleScroll = (id) => {
+    const section = document.getElementById(id);
+    if (section) {
+      section.scrollIntoView({ behavior: "smooth" });
+    }
+  };
+
   return (
-    <main className="hero relative w-screen overflow-x-hidden">
+    <main id="home" className="hero relative w-screen overflow-x-hidden">
       <div className="absolute inset-0 bg-[url('aerial-view-container-cargo-ship-sea.jpg')] -z-10 bg-cover bg-center blur-[5px] brightness-75 opacity-70"></div>
       <nav className="navbar sticky top-10 flex items-center px-5 h-12 mx-4 justify-between rounded-4xl">
         <div className="md:hidden">
@@ -152,18 +159,20 @@ function HeroSection() {
           C'est Bon LLC
         </div>
         <ul className="hidden md:flex gap-4">
-          <LiElement>Home</LiElement>
-          <LiElement>About Us</LiElement>
-          <LiElement>Services</LiElement>
+          <LiElement onClick={() => handleScroll("home")}>Home</LiElement>
+          <LiElement onClick={() => handleScroll("about")}>About Us</LiElement>
+          <LiElement onClick={() => handleScroll("services")}>
+            Services
+          </LiElement>
         </ul>
 
-        <Button>Get Started</Button>
+        <Button onclick={() => handleScroll("steps")}>Get Started</Button>
       </nav>
 
       {/* Sidebar Component */}
       <Sidebar open={open} setOpen={setOpen} />
 
-      <section className="hero-content w-full ">
+      <section data-aos="fade-up" className="hero-content w-full ">
         <p className="text-[#ffff] md:text-[28px]">Welcome to C'est Bon LLC</p>
         <h1 className="text-[#ffffff] font-bold text-6xl max-lg:text-7xl max-sm:text-3xl max-md:text-5xl mt-4">
           Driven by <span className="text-[#FFD700]"> Excellence </span>,

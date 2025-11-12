@@ -55,10 +55,10 @@ export default function ContactCTA() {
                 +1 806 283 0571 (USA)
               </a>
               <a
-                href="tel:+233552282230"
+                href="tel:+233248003006"
                 className="mt-2 text-gray-200 hover:text-yellow-300 transition"
               >
-                +233 55 228 2230 (Ghana)
+                +233 24 800 3006 (Ghana)
               </a>
             </div>
           </div>
@@ -82,7 +82,7 @@ export default function ContactCTA() {
 
         <div className="mt-10 text-center flex justify-center items-center">
           <a
-            href="https://wa.me/233552282230"
+            href="https://wa.me/233248003006"
             target="_blank"
             className="bg-green-600 text-white px-6 py-4 rounded-lg hover:bg-green-700 transition"
           >

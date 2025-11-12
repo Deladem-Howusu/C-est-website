@@ -4,8 +4,24 @@ import {
   FaTwitter,
   FaLinkedinIn,
 } from "react-icons/fa";
+import { useNavigate } from "react-router-dom";
 
 export default function Footer() {
+  // Scroll smoothly to section
+  const handleScroll = (id) => {
+    const section = document.getElementById(id);
+    if (section) {
+      section.scrollIntoView({ behavior: "smooth" });
+    }
+  };
+
+  const navigate = useNavigate();
+
+  const handleNavigate = (id) => {
+    navigate(`/service/${id}`);
+    window.scrollTo(0, 0);
+  };
+
   return (
     <footer className="bg-[#0A1A44] text-white py-16 px-6">
       <div className="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-4 gap-10">
@@ -25,12 +41,18 @@ export default function Footer() {
         <div>
           <h4 className="font-semibold text-lg mb-4">Quick Links</h4>
           <ul className="space-y-3 text-gray-300 text-sm">
-            {["Home", "About Us", "Services", "Contact"].map((item, i) => (
+            {[
+              { label: "Home", id: "home" },
+              { label: "About Us", id: "about" },
+              { label: "Services", id: "services" },
+              { label: "Contact", id: "contact" },
+            ].map((item, i) => (
               <li
                 key={i}
+                onClick={() => handleScroll(item.id)}
                 className="hover:text-yellow-400 transition cursor-pointer"
               >
-                {item}
+                {item.label}
               </li>
             ))}
           </ul>
@@ -40,16 +62,19 @@ export default function Footer() {
         <div>
           <h4 className="font-semibold text-lg mb-4">Our Services</h4>
           <ul className="space-y-3 text-gray-300 text-sm">
-            {["Deliveries", "Product Sales", "Travel Assistance"].map(
-              (item, i) => (
-                <li
-                  key={i}
-                  className="hover:text-yellow-400 transition cursor-pointer"
-                >
-                  {item}
-                </li>
-              )
-            )}
+            {[
+              { label: "Deliveries", id: "delivery" },
+              { label: "Product Sales", id: "products" },
+              { label: "Travel Assistance", id: "travel" },
+            ].map((item, i) => (
+              <li
+                key={i}
+                className="hover:text-yellow-400 transition cursor-pointer"
+                onClick={() => handleNavigate(item.id)}
+              >
+                {item.label}
+              </li>
+            ))}
           </ul>
         </div>
 
@@ -65,6 +90,7 @@ export default function Footer() {
               (Icon, index) => (
                 <a
                   key={index}
+                  href="#"
                   className="w-10 h-10 flex items-center justify-center bg-white/10 
                            rounded-full hover:bg-yellow-400 text-white hover:text-blue-900 
                            transition-all cursor-pointer"

@@ -27,7 +27,7 @@ function Services() {
       {/* Travelling Assistance */}
       <div className="mt-8">
         <div className="flex lg:flex-row flex-col bg-[#fafafa] lg:h-80 h-fit lg:px-10 pt-5 p-5 rounded-2xl gap-10 shadow">
-          <div>
+          <div data-aos="fade-up">
             <h1 className="md:text-[20px] sm:text-2xl font-semibold text-[#21457A] pb-5">
               Travelling Assistance
             </h1>
@@ -53,7 +53,10 @@ function Services() {
       {/* Product Sales */}
       <div className="flex flex-col lg:flex-row w-full justify-between">
         <div className="mt-8 lg:w-[48%] w-full">
-          <div className="bg-[#fafafa] h-fit p-5 py-5 rounded-2xl gap-10 shadow">
+          <div
+            data-aos="fade-up"
+            className="bg-[#fafafa] h-fit p-5 py-5 rounded-2xl gap-10 shadow"
+          >
             <h1 className="md:text-[20px] sm:text-2xl font-semibold text-[#21457A] pb-5">
               Product Sales
             </h1>
@@ -78,7 +81,10 @@ function Services() {
 
         {/* Delivery */}
         <div className="mt-8 lg:w-[48%] w-full">
-          <div className="bg-[#fafafa] h-fit p-5 rounded-2xl gap-10 shadow">
+          <div
+            data-aos="fade-up"
+            className="bg-[#fafafa] h-fit p-5 rounded-2xl gap-10 shadow"
+          >
             <h1 className="md:text-[20px] sm:text-2xl font-semibold text-[#21457A] pb-5">
               Delivery Services
             </h1>

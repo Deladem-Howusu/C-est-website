@@ -66,7 +66,7 @@ function Sidebar({ open, setOpen }) {
 
         {/* Button */}
         <div className="mt-8 px-6">
-          <Button>Get Started</Button>
+          <Button onclick={() => handleScroll("steps")}>Get Started</Button>
         </div>
       </div>
     </div>

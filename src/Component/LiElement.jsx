@@ -1,6 +1,6 @@
-function LiElement({ children }) {
+function LiElement({ children, onClick }) {
   return (
-    <li className="text-white font-medium text-[16px] ">
+    <li onClick={onClick} className="text-white font-medium text-[16px] ">
       <a href="#">{children}</a>
     </li>
   );
