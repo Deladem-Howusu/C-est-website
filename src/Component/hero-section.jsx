@@ -145,7 +145,7 @@ function HeroSection() {
 
   return (
     <main id="home" className="hero relative w-screen overflow-x-hidden">
-      <div className="absolute inset-0 bg-[url('aerial-view-container-cargo-ship-sea.jpg')] -z-10 bg-cover bg-center blur-[5px] brightness-75 opacity-70"></div>
+      <div className="absolute inset-0 bg-[url('/aerial-view-container-cargo-ship-sea.jpg')] -z-10 bg-cover bg-center blur-[5px] brightness-75 opacity-70"></div>
       <nav className="navbar sticky top-10 flex items-center px-5 h-12 mx-4 justify-between rounded-4xl">
         <div className="md:hidden">
           <Menu
