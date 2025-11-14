@@ -14,7 +14,9 @@
 .animate-fadeIn {
   animation: fadeIn 0.4s ease-out forwards;
 }
-
+* {
+  transition: background-color 0.3s, color 0.3s;
+}
 body,
 html {
   margin: 0;
@@ -36,6 +38,12 @@ html {
   background-repeat: no-repeat;
 
   /* filter: blur(6px); */
+}
+
+.button:hover {
+  border: solid 1px white;
+  background-color: inherit;
+  color: white;
 }
 
 .navbar {
