@@ -13,7 +13,7 @@ const testimonials = [
     country: "Ghana",
     text: "Fast processing and great support. They kept me updated every step of the way.",
     rating: 5,
-    avatar: "https://i.pravatar.cc/150?img=32",
+    avatar: "https://i.pravatar.cc/150?img=12",
   },
   {
     name: "Linda Martins",
