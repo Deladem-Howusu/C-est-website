@@ -4,6 +4,7 @@
 
 a:hover {
   color: #60b5fa;
+  transition: background-color 0.3s, color 0.3s;
 }
 
 h1 {
@@ -14,6 +15,7 @@ h1 {
 button:hover {
   border-color: #646cff;
   cursor: pointer;
+  transition: background-color 0.3s, color 0.3s;
 }
 button:focus,
 button:focus-visible {
